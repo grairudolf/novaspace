@@ -17,8 +17,14 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevents bottom spacing issues */
+}
+
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0.3125rem; /* 5px / 16px */
 }
 
 ::-webkit-scrollbar-track {
@@ -43,7 +49,7 @@ body {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 6rem;
+  padding: 0 5%;
 }
 
 header.aos-init.aos-animate.hidden {
@@ -58,7 +64,7 @@ header.aos-init.aos-animate.hidden {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  padding: 12px;
+  padding: 0.75rem; /* 12px / 16px */
   border: 2px solid #fff;
   border-radius: 50%;
   color: #fff;
@@ -109,7 +115,7 @@ header .container .content .logo {
 }
 
 header .container .content .logo img {
-  width: 100px;
+  width: 5rem; /* Approx 100px if 1rem = 20px, or 80px if 1rem=16px. Consider base font size. */
 }
 
 header .container .content .logo a {
@@ -126,14 +132,14 @@ header .container .content .extra-nav {
 
 header .container .content .extra-nav button {
   cursor: pointer;
-  padding: 10px;
+  padding: 0.625rem; /* 10px / 16px */
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: var(--darkgray);
   border: 2px solid var(--gray);
   color: var(--white);
-  width: 150px;
+  min-width: 9rem; /* Approx 144px if 1rem = 16px */
   border-radius: 8px;
 }
 
@@ -143,7 +149,7 @@ header .container .content .extra-nav button:hover {
 }
 
 header .container .content .extra-nav button .icon {
-  padding: 4px;
+  padding: 0.25rem; /* 4px / 16px */
   display: block;
   background: var(--gray);
   border-radius: 4px;
@@ -208,6 +214,7 @@ header .container .content .extra-nav button:hover .icon {
   font-weight: 600;
   text-align: center;
   width: 53%;
+  max-width: 40rem; /* Added max-width for very large screens */
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: var(--lightgray);
@@ -229,7 +236,7 @@ header .container .content .extra-nav button:hover .icon {
   padding: 8px;
   border-bottom: 2px solid var(--white);
   border-top: 2px solid var(--gray);
-  width: 12.5%;
+  padding: 0.5rem 1rem; /* Replaced fixed width with padding */
   background: var(--darkgray);
   border-radius: 32px;
   transition: .5s linear;
@@ -332,7 +339,7 @@ header .container .content .extra-nav button:hover .icon {
   justify-content: center;
   gap: 2rem;
   width: 30%;
-  height: 350px;
+  min-height: 22rem; /* Approx 352px if 1rem = 16px */
   padding: 1rem;
   background-color: var(--dark);
   border: 2px solid var(--darkgray);
@@ -344,8 +351,8 @@ header .container .content .extra-nav button:hover .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 65px;
-  height: 65px;
+  width: 4rem; /* Approx 64px */
+  height: 4rem; /* Approx 64px */
   border-radius: 8px;
   font-size: 1.5rem;
   background: var(--darkgray);
@@ -371,10 +378,10 @@ header .container .content .extra-nav button:hover .icon {
   top: -100%;
   left: -150%;
   width: 350%;
-  height: 15px;
+  height: 0.9375rem; /* 15px / 16px */
   transform: rotate(-40deg);
   border: none;
-  padding: 10px;
+  padding: 0.625rem; /* 10px / 16px */
   background: var(--white);
   box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
@@ -428,7 +435,7 @@ header .container .content .extra-nav button:hover .icon {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding:10px;
+  padding: 0.625rem; /* 10px / 16px */
   border-radius: 32px;
   text-decoration: none;
   color: var(--white);
@@ -439,7 +446,7 @@ header .container .content .extra-nav button:hover .icon {
 }
 
 .about .container .content a .icon {
-  padding: 4px;
+  padding: 0.25rem; /* 4px / 16px */
   background: var(--white);
   color: var(--black);
   border-radius: 50%;
@@ -447,7 +454,7 @@ header .container .content .extra-nav button:hover .icon {
 
 .status {
   min-height: 100vh;
-  overflow:visible;
+  overflow:hidden; /* Changed from visible to hidden */
 }
 
 .status .container .content {
@@ -515,7 +522,7 @@ header .container .content .extra-nav button:hover .icon {
 .status .container .content .planet .earth .moon .moon-desc {
   position: absolute;
   top: -100%;
-  width: 250px;
+  width: 15.625rem; /* 250px / 16px */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -524,9 +531,9 @@ header .container .content .extra-nav button:hover .icon {
 
 .status .container .content .planet .earth .moon .moon-desc hr {
   background: linear-gradient( rgba(0,0,0,0.1), #fff);
-  padding: 2px;
-  width: 2px;
-  height: 100px;
+  padding: 0.125rem; /* 2px / 16px */
+  width: 0.125rem; /* 2px / 16px */
+  height: 6.25rem; /* 100px / 16px */
   border-radius: 8px;
   border: none;
 }
@@ -644,7 +651,7 @@ header .container .content .extra-nav button:hover .icon {
   text-decoration: none;
   color: var(--white);
   font-size: .8rem;
-  padding: 4px;
+  padding: 0.25rem; /* 4px / 16px */
   border: 2px solid var(--lightgray);
   border-radius: 12px;
   background-color: transparent;
@@ -675,12 +682,12 @@ header .container .content .extra-nav button:hover .icon {
   text-decoration: none;
   color: var(--white);
   font-size: .8rem;
-  padding: 4px;
+  padding: 0.25rem; /* 4px / 16px */
   border: 2px solid var(--lightgray);
   border-radius: 12px;
   background-color: transparent;
   backdrop-filter: blur(2px);
-  width: 125px;
+  min-width: 7.8rem; /* Approx 124.8px if 1rem = 16px */
 }
 
 .destination .container .content .items a:hover {
@@ -688,7 +695,7 @@ header .container .content .extra-nav button:hover .icon {
 }
 
 .destination .container .content .items a .icon {
-  width: 16px;
+  width: 1rem; /* 16px / 16px */
 }
 
 .destination .container .content .items h1 {
@@ -919,7 +926,7 @@ header .container .content .extra-nav button:hover .icon {
   border: none;
   border-radius: 12px;
   width: 25%;
-  padding: 12px;
+  padding: 0.75rem; /* 12px / 16px */
   color: var(--white);
   font-size: 1.2rem;
 }
@@ -959,3 +966,528 @@ footer p {
     }
 }
 
+/* Media Queries */
+
+/* Tablet Screens (<= 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 3%; /* Adjust container padding */
+  }
+
+  header .container .content .logo a {
+    font-size: 1rem; /* Adjust logo font size */
+  }
+
+  header .container .content .extra-nav {
+    gap: 1rem; /* Reduce gap for nav items */
+  }
+
+  header .container .content .extra-nav button {
+    min-width: auto; /* Allow button to shrink */
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .hero .container .content .text h1 {
+    font-size: 2.8rem; /* Adjust hero heading */
+    text-align: center;
+  }
+
+  .hero .container .content .text p {
+    width: 70%; /* Adjust hero paragraph width */
+    font-size: 1.1rem;
+  }
+
+  .hero .container .content .moon {
+    width: 70vw; /* Adjusted from 50em */
+    height: 70vw; /* Adjusted from 50em */
+    /* Adjust box-shadow based on new vw sizing, original was: inset 8em -8em 8em 8em #000, 2.5em -.5em 4em #fff; */
+    box-shadow: inset 4em -4em 4em 4em rgba(0,0,0,0.7), 1.5em -0.3em 2em rgba(255,255,255,0.7);
+  }
+
+  .why-us .container .content .title h1 {
+    font-size: 2rem;
+  }
+  .why-us .container .content .title p {
+    width: 70%;
+  }
+
+  .why-us .container .content .reason {
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: center; /* Center cards when wrapped */
+  }
+
+  .why-us .container .content .reason .card {
+    width: 45%; /* Adjust card width for 2 per row */
+    margin-bottom: 1rem; /* Add margin for wrapped cards */
+  }
+
+  .about .container .content {
+    align-items: center; /* Center content */
+    text-align: center;
+  }
+
+  .about .container .content .text-action {
+    width: 60%; /* Adjust text-action width */
+    align-items: center;
+  }
+
+  .about .container .content a {
+    width: 40%; /* Adjust button width */
+  }
+
+  .status .container .content .title h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .status .container .content .title p {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+  .status .container .content .planet .earth {
+    width: 25em; /* Scale down earth */
+    height: 25em;
+  }
+
+  .status .container .content .planet .earth .moon {
+    width: 5em;
+    height: 5em;
+    left: -8em;
+  }
+
+  .status .container .content .planet .earth .moon .moon-desc {
+    width: 12rem; /* Adjust width */
+    top: -120%;
+  }
+
+  .status .container .content .planet .earth .moon .moon-desc hr {
+    height: 4rem;
+  }
+
+  .status .container .content .planet .earth {
+    margin-bottom: 2rem; /* Space for descriptions below */
+  }
+
+  .status .container .content .planet .desc {
+    position: static; /* Override absolute positioning */
+    transform: none; /* Reset transform */
+    width: 80%; /* Or a suitable width for centered content */
+    margin: 1rem auto; /* Center the description blocks and add space */
+    left: auto;
+    right: auto;
+    top: auto;
+    text-align: center; /* Center text within the description block */
+    font-size: 0.9rem; /* Keep adjusted font size */
+  }
+
+  /* Remove specific styling for desc-1 to desc-6 as they are now stacked */
+  .status .container .content .planet .desc-1,
+  .status .container .content .planet .desc-2,
+  .status .container .content .planet .desc-3,
+  .status .container .content .planet .desc-4,
+  .status .container .content .planet .desc-5,
+  .status .container .content .planet .desc-6 {
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 80%; /* Consistent with the general .desc styling */
+    /* align-items: center; was for flex, text-align: center is now used */
+  }
+
+  .status .container .content .planet .desc hr {
+    margin-left: auto; /* Center hr if it's not 100% width */
+    margin-right: auto;
+    width: 50%; /* Example: make hr smaller and centered */
+  }
+
+
+  .destination .container .content {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for destinations */
+    grid-template-rows: auto; /* Adjust rows automatically */
+    height: auto; /* Adjust height */
+  }
+
+  .destination .container .content .title,
+  .destination .container .content .saturn,
+  .destination .container .content .moon,
+  .destination .container .content .eyropa,
+  .destination .container .content .mercury,
+  .destination .container .content .blackhole,
+  .destination .container .content .titan,
+  .destination .container .content .neptune,
+  .destination .container .content .mars {
+    grid-column: span 1; /* Each item takes one column */
+    grid-row: auto; /* Adjust rows automatically */
+  }
+
+  .destination .container .content .title h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact .container .content {
+    flex-direction: column; /* Stack elements */
+    height: auto; /* Adjust height */
+    padding: 2rem 0;
+  }
+
+  .contact .container .content .left-side,
+  .contact .container .content .right-side {
+    width: 100%; /* Full width for both sides */
+    text-align: center;
+  }
+
+  .contact .container .content .left-side {
+    gap: 2rem; /* Reduce gap */
+  }
+
+  .contact .container .content .left-side h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact .container .content .right-side form {
+    padding: 3rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact .container .content .right-side form h1 {
+    font-size: 2rem;
+  }
+
+  .contact .container .content .right-side form button {
+    width: 40%;
+  }
+}
+
+/* Mobile Screens (<= 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 4%; /* Further adjust container padding */
+  }
+
+  header {
+    height: auto; /* Allow header to grow if needed */
+    padding: 0.5rem 0;
+  }
+
+  header .container .content {
+    flex-direction: column; /* Stack logo and nav */
+    gap: 0.5rem;
+  }
+
+  header .container .content .logo img {
+    width: 4rem;
+  }
+  header .container .content .logo a {
+    font-size: 1rem;
+  }
+
+  header .container .content .extra-nav {
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center;
+    gap: 0.5rem; /* Reduce gap for nav items */
+  }
+
+  header .container .content .extra-nav button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .hero .container .content .text {
+    margin-bottom: 35%; /* Adjust margin for smaller screens */
+  }
+
+  .hero .container .content .text h1 {
+    font-size: 2rem; /* Further reduce hero heading */
+  }
+
+  .hero .container .content .text p {
+    width: 90%; /* Wider hero paragraph */
+    font-size: 1rem;
+  }
+
+  .hero .container .content .text a {
+    padding: 0.4rem 0.8rem; /* Adjust button padding */
+    font-size: 0.9rem;
+  }
+
+  .hero .container .content .moon {
+    width: 85vw; /* Adjusted from 30em */
+    height: 85vw; /* Adjusted from 30em */
+    bottom: -60%; /* Adjusted position slightly due to size change, may need further review */
+    /* Adjust box-shadow based on new vw sizing, original mobile was: inset 4em -4em 4em 4em #000, 1.5em -.3em 2em #fff; */
+    /* Desktop shadow: inset 8em -8em 8em 8em #000, 2.5em -.5em 4em #fff; */
+    box-shadow: inset 2em -2em 2em 2em rgba(0,0,0,0.6), 1em -0.2em 1em rgba(255,255,255,0.5);
+  }
+
+  .why-us .container .content {
+    height: auto; /* Adjust height */
+    padding: 2rem 0;
+  }
+
+  .why-us .container .content .title h1 {
+    font-size: 1.8rem;
+  }
+  .why-us .container .content .title h2 {
+    font-size: 1.3rem;
+  }
+  .why-us .container .content .title p {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .why-us .container .content .reason {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+
+  .why-us .container .content .reason .card {
+    width: 90%; /* Full width for cards */
+    min-height: auto; /* Auto height */
+  }
+
+  .why-us .container .content .reason .card .desc {
+    width: 90%;
+    height: auto; /* Auto height */
+  }
+
+  .about .container .content {
+    height: auto; /* Adjust height */
+    padding: 2rem 0;
+    align-items: center;
+  }
+
+  .about .container .content .text-action {
+    width: 90%; /* Full width for text-action */
+    align-items: center; /* Center items */
+  }
+
+  .about .container .content h1 { font-size: 1.8rem; }
+  .about .container .content h2 { font-size: 1.3rem; }
+  .about .container .content p { font-size: 1rem; }
+
+  .about .container .content a {
+    width: 60%; /* Wider button */
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .status .container .content {
+    height: auto; /* Adjust height */
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  .status .container .content .title h2 {
+    font-size: 1.8rem;
+  }
+
+  .status .container .content .title p {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .status .container .content .planet .earth {
+    width: 18em; /* Further scale down earth */
+    height: 18em;
+    box-shadow: inset -1em -1em 1em #000, -0.25em -0.25em 0.5em #375673; /* Adjust shadow */
+  }
+
+  .status .container .content .planet .earth .moon {
+    width: 3em; /* Scale moon */
+    height: 3em;
+    left: -5em; /* Adjust position */
+    box-shadow: inset -0.5em -0.5em 0.5em #000, -0.1em -0.1em 0.2em #ccc; /* Adjust shadow */
+  }
+
+  .status .container .content .planet .earth .moon .animation {
+      animation: none; /* May remove complex animations on mobile */
+  }
+
+  .status .container .content .planet .earth .moon .moon-desc {
+     display: none; /* Hide moon description on small screens for simplicity */
+  }
+
+  .status .container .content .planet .desc {
+    position: static; /* Static positioning for descriptions */
+    transform: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .status .container .content .planet .desc hr {
+    display: none; /* Hide hr for stacked items */
+  }
+
+  .status .container .content .planet .desc:nth-child(5),
+  .status .container .content .planet .desc:nth-child(6),
+  .status .container .content .planet .desc:nth-child(7),
+  .status .container .content .planet .desc:nth-child(8) {
+    align-items: center; /* Center align all description items */
+  }
+
+  .destination {
+    padding: 2rem 0;
+  }
+
+  .destination .container .content {
+    grid-template-columns: 1fr; /* Single column for destinations */
+    gap: 1rem; /* Reduce gap */
+  }
+
+  .destination .container .content .title h1 {
+    font-size: 1.8rem;
+    letter-spacing: .2em;
+  }
+  .destination .container .content .title p {
+    font-size: 1rem;
+  }
+  .destination .container .content .title a {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+
+  .destination .container .content .items {
+    padding: 1rem;
+  }
+  .destination .container .content .items h1 {
+    font-size: 1.3rem;
+  }
+   .destination .container .content .items a {
+    min-width: 6rem; /* Adjusted from fixed 100px */
+    width: auto; /* Remove fixed width */
+    display: inline-flex; /* Ensure proper padding and alignment */
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem; /* Kept existing font size */
+    padding: 0.5rem 1rem; /* Adjusted padding */
+  }
+
+
+  .contact .container .content .left-side h1 {
+    font-size: 1.8rem;
+    letter-spacing: .2em;
+  }
+
+  .contact .container .content .left-side p {
+    font-size: 1rem;
+  }
+
+  .contact .container .content .right-side form {
+    padding: 2rem; /* Adjust form padding */
+    width: 100%;
+  }
+
+  .contact .container .content .right-side form h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact .container .content .right-side form .row-1,
+  .contact .container .content .right-side form .row-2 {
+    flex-direction: column; /* Stack inputs */
+    gap: 1rem; /* Adjust gap */
+  }
+
+  .contact .container .content .right-side form .row-1 input,
+  .contact .container .content .right-side form .row-2 input {
+    width: 100%; /* Full width for inputs */
+  }
+
+  .contact .container .content .right-side form textarea {
+    font-size: 1rem;
+  }
+
+  .contact .container .content .right-side form button {
+    width: 50%; /* Wider button */
+    font-size: 1rem;
+  }
+
+  .contact .container .content .right-side form .remember p {
+    font-size: 1rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .to-top {
+    padding: 0.5rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  /* Adjusting animations for performance on mobile if needed */
+  .hero .container .content .moon,
+  .status .container .content .planet .earth,
+  .status .container .content .planet .earth .moon {
+    /* Example: disable or simplify complex animations */
+    /* animation-duration: 300s; /* Slow down significantly */
+    /* animation: none; /* Or disable if too performance-heavy */
+  }
+}
+
+/* Landscape mode for small height devices (like phones) */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero, .why-us, .about, .status, .contact { /* Added .contact as well */
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero .container .content,
+  .why-us .container .content,
+  .about .container .content,
+  .status .container .content,
+  .contact .container .content {
+    height: auto; /* Allow content height to define section height */
+  }
+
+  .hero .container .content .text {
+    margin-bottom: 5%; /* Reduce bottom margin of text to avoid pushing moon too far if moon is kept */
+  }
+
+  .hero .container .content .moon {
+     /* Consider if moon should also be smaller or positioned differently in landscape */
+     /* For now, it will scale with vw as per previous rules, might be too large for landscape height */
+     /* Example: width: 40vh; height: 40vh; bottom: -20vh; to scale with height instead */
+  }
+}
+
+/* Header adjustments for very small screens */
+@media (max-width: 360px) {
+  header .container .content .logo img {
+    width: 3.5rem; /* Slightly smaller logo image */
+  }
+  header .container .content .logo a {
+    font-size: 0.9rem; /* Slightly smaller logo text */
+  }
+
+  header .container .content .extra-nav button {
+    padding: 0.4rem; /* Reduced padding */
+    /* Attempt to hide text and keep icon */
+    font-size: 0; /* Hides direct text if no specific element wraps it */
+  }
+
+  header .container .content .extra-nav button .icon {
+    font-size: 1rem; /* Ensure icon is visible, this won't directly set svg size */
+    margin: 0; /* Center icon */
+  }
+
+  header .container .content .extra-nav button .icon svg {
+    width: 1.3rem; /* Adjust Feather icon size */
+    height: 1.3rem;
+  }
+
+  /* Reduce font size for hero section on very small screens */
+  .hero .container .content .text h1 {
+    font-size: 1.8rem;
+  }
+  .hero .container .content .text p {
+    font-size: 0.9rem;
+  }
+}
